@@ -12,7 +12,7 @@ import Question from 'src/components/Common/Question'
 import dynamic from 'next/dynamic'
 import QuestionMiddleSectionOptions from 'src/components/view/common/QuestionMiddleSectionOptions'
 import { showAnswerStatusClass } from 'src/utils'
-import Lottie from 'react-lottie-player'
+const LottiePlayer = dynamic(() => import('react-lottie-player'), { ssr: false });
 import bookmarkPlayEnd from 'src/components/view/common/bookmark_play_end.json'
 import Timer from 'src/components/Common/Timer'
 import AudioQuestionsDashboard from 'src/components/Quiz/AudioQuestions/AudioQuestionsDashboard'
@@ -144,7 +144,7 @@ const nextQuestion = () =>{
                 if (showBackButton) {
                   return (
                     <div className='dashoptions flex-column'>
-                      <Lottie
+                      <LottiePlayer
                         loop
                         animationData={bookmarkPlayEnd}
                         play
