@@ -13,6 +13,7 @@
     "build:icons": "node src/iconify-bundle/bundle-icons-react.js"
   },
   "dependencies": {
+     "lottie-web": "^5.7.4",
     "@reduxjs/toolkit": "^1.6.1",
     "@testing-library/jest-dom": "5.14.1",
     "@testing-library/react": "11.2.7",
