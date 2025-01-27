@@ -7,7 +7,7 @@ import { getFirestore } from 'firebase/firestore'
 import { useRouter } from 'next/router'
 const FirebaseData = () => {
   const websettingsdata = useSelector(websettingsData)
-
+  console.log("websettingsdata:", websettingsdata);
   const firebaseConfig = {
     apiKey: websettingsdata?.firebase_api_key,
     authDomain: websettingsdata?.firebase_auth_domain,
